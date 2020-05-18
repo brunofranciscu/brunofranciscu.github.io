@@ -16,15 +16,14 @@
 }
 #progress {
     width: 378px;
-    height: 4px;
+    height: 3px;
     border-radius: 3px;
-    background: rgba(0,0,0,.5);
-    border: 1px solid #ccc; 
+    background: rgba(255,255,255,.4);
     position:relative;
-    top: 10px;
+    top: -17px;
     left: 50%;
     z-index: 9;
-  transform: translate(-50%,-50%)
+    transform: translate(-50%,-50%);
 }
 .close{
   border: 0;
@@ -42,8 +41,8 @@
 
 #bar{
   width: 0px;
-  height: 4px;
-  background: rgba(255,255,255,.8);
+  height: 3px;
+  background: rgba(255,255,255,.6);
   transition: 9.8s
 }
 @media screen and (max-width:600px){
