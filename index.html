@@ -1,19 +1,113 @@
+
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <meta
-      name="description" content="Web site created using create-react-app"/>
-      <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <title>BRVN FRNCSCVS</title>
-  </head>
-  <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
-  </body>
+<html>
+<head>
+	<title>BRUNO</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" >
+	<link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400&display=swap" rel="stylesheet">
+	<script src="jquery.js"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="icon" type="image/png" href="http://brunofrancisco.com.br/icon.png" />
+	
+</head>
+<body onload="$('footer span').html(output), borderStorie()">
+	<header>
+		<div class="mirrorBg">
+		<video autoplay loop>
+			<source src="mirror.webm" type="" >
+		</video>
+		</div>
+		<nav>
+			<ul>
+				<li><a href="http://www.brunofrancisco.com.br/portfolio">PORTFOLIO</a></li>
+			</ul>
+		</nav>
+	</header>
+	<div class="stories">
+
+
+	</div>
+	<section id="image">
+		<div class="twinkling"></div>
+		<div id="large">
+			<div id="prof">
+			 </div>
+
+			<div class="inf">
+				<h2>BRUNO<span>_</span></h2>
+				<p>As the old world fall behind, my spirit reaches wide...</p>
+				<span>doe bitcoins/donate some bitcoins</span>
+				<p id="bit">1GsaVB7ypw8zkZz5KKL124GcKEi1ZfCZdD</p>
+			</div>
+		</div>
+		
+	</section>
+
+	<section id="dois">
+		<div class="bio">
+			<h2>'BOUT</h2>
+			<p>Aren't just contradictions nor fictions<br>
+				Is not what you imagine, nor what you suppose<br>
+				Isn't something you've ever felt, nor anything you've ever seen
+					<br><br>
+				It is the depth you have never reached, nor even plunged<br>
+				It's the sensibility & vulnerability you call 'Drama'<br>
+				It is the Mystery: indescribable & invisible</p>
+		</div>
+
+		<div class="bio2">
+			<h2>SOBRE</h2>
+			<p>	Não são apenas contradições, nem ficções<br>
+				Não é o que imaginam, nem o que supõem<br>
+				Não é nada que você já sentiu, nem do que jamais viu<br><br>
+
+				É a profundidade que você nunca alcançou ou mergulhou<br>
+				É a sensibilidade e a vulnerabilidade que você chama de "drama"<br>
+				É o mistério indescritível & invisível. </p>
+		</div>
+
+
+
+	</section>
+
+
+	<footer>
+		<p>&lt;/&gt; BRUNO | <span > 2019 </span></p>
+		
+	</footer>
+	 <script>
+//FOOTER YEAR
+var data = new Date();
+var ano = data.getDate();
+data.getFullYear();
+var output = data.getFullYear();
+
+		 function borderStorie(){
+$('#prof').append('<div id="border"></div>');}
+		
+
+//TRIGGER STORIES
+$('#prof').click(function(){
+  var newStorie = Math.floor(Math.random()*15000)+3000;
+$('#border').css('filter','grayscale(1)');
+ $('.stories').fadeIn('slow').load('stories.html');
+
+   setTimeout(function(){
+    setTimeout(function(){
+     document.getElementById('bar').style.width = '0px';
+   },10)
+
+  $('.stories, .loader').fadeOut('fast');
+   },10000)
+setTimeout(function(){
+$('#border').css('filter','grayscale(0)');
+},newStorie)
+});
+
+
+</script>
+</body>
+
 </html>
+

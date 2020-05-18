@@ -1,0 +1,51 @@
+	<!DOCTYPE html>
+	<html>
+	<head>
+		<title></title>
+		<script src="jquery.js"></script>
+		<link rel="stylesheet" type="text/css" href="storiesStyle.css">
+		<link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400&display=swap" rel="stylesheet">
+	</head>
+	<body>
+
+
+		<div id="first" class="storie">
+			<div id="progress">
+				<div id="bar"></div>
+				<button class="close" onclick="closeStories()">X</button>
+			</div>
+			<div class="loader"></div>
+		</div>
+		<script type="text/javascript">
+			//PROGRESS BAR STORIES
+			var progress = '100%';
+
+			function progressBar(){
+				$('.loader').fadeOut(3000);
+			 setTimeout(function(){
+			  document.getElementById('bar').style.width = progress;
+			 },20)
+			}    
+			
+			function closeStories(){
+				$('.stories').fadeOut('fast');
+			}
+    
+			var ramdomizer = Math.floor(Math.random()*72)+1
+			var adress = 'url(img/'+ramdomizer+'.jpg) #555'
+			
+			$(document).ready(function(){
+			$('.storie').css('background',adress);
+			progressBar()
+				
+	})
+		</script>
+	</body>
+	</html>
+
+		
+		
+		
+		
+
+	
