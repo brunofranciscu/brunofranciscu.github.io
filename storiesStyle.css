@@ -54,7 +54,7 @@
     width: 90%;
     top: 1.5%;
   }
-  .close{right:-24px}
+  .close{right:-24px; text-shadow: 0 0 3px black}
 }
 
 .loader{
