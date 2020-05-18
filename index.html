@@ -89,20 +89,26 @@ $('#prof').append('<div id="border"></div>');}
 
 //TRIGGER STORIES
 $('#prof').click(function(){
-  
-$('#border').css('filter','grayscale(1)');
+  $('#border').css('filter','grayscale(1)');
+	
  $('.stories').fadeIn('slow').load('stories.html');
-   setTimeout(function(){
-    setTimeout(function(){document.getElementById('bar').style.width = '0px' },10)
-
-  $('.stories, .loader').fadeOut('fast');},10000)
+	
+    setTimeout(function(){
+	    document.getElementById('bar').style.width = '0px' },10)
 })
 		 
-var newStorie = Math.floor(Math.random()*15000)+3000;
 $('#prof').click(function(){
-setTimeout(function(){
-$('#border').css('filter','grayscale(0)');
-},newStorie)
+	setTimeout(function(){
+		$('.stories, .loader').fadeOut('fast')},10000)
+})
+	
+		 
+var newStorie = Math.floor(Math.random()*15000)+3000;
+		 
+$('#border').click(function(){
+	setTimeout(function(){
+		$('#border').css('filter','grayscale(0)');
+	},newStorie)
 });
 
 
